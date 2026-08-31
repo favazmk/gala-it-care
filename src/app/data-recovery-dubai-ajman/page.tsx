@@ -44,7 +44,7 @@ export default function DataRecoveryPage() {
             <div className="absolute inset-0 z-0 hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
-                src="/images/data_recovery_hero_premium.webp"
+                src="/images/data_desktop.webp"
                 alt="Data Recovery Clean Room Lab"
                 fill
                 priority
@@ -57,7 +57,7 @@ export default function DataRecoveryPage() {
               <div className="absolute inset-0 z-0 lg:hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/60 to-primary z-10" />
                 <Image 
-                  src="/images/data_recovery_hero_premium.webp"
+                  src="/images/data_mobile.webp"
                   alt="Data Recovery Clean Room Lab"
                   fill
                   priority

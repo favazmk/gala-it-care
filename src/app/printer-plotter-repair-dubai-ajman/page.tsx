@@ -38,11 +38,21 @@ export default function PrinterRepairPage() {
       {/* 1. FULL-WIDTH DARK TECHNICAL HERO */}
       <section className="relative bg-primary text-white pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
         {/* Background Layer */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/85 mix-blend-multiply z-10" />
+        <div className="absolute inset-0 z-0 hidden lg:block">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
           <Image 
-            src="/images/printer_hero.webp"
-            alt="Professional Printer and Plotter Repair in Dubai"
+            src="/images/printer_desktop.webp"
+            alt="Printer Repair Lab"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 lg:hidden">
+          <div className="absolute inset-0 bg-primary/90 z-10" />
+          <Image 
+            src="/images/printer_mobile.webp"
+            alt="Printer Repair Lab"
             fill
             priority
             className="object-cover object-center"

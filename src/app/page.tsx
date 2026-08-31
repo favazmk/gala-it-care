@@ -44,7 +44,7 @@ export default function PrinterRepairPage() {
             <div className="absolute inset-0 z-0 hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
-                src="/images/printer_hero_premium.webp"
+                src="/images/printer_desktop.webp"
                 alt="Printer Repair Lab"
                 fill
                 priority
@@ -57,7 +57,7 @@ export default function PrinterRepairPage() {
               <div className="absolute inset-0 z-0 lg:hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/60 to-primary z-10" />
                 <Image 
-                  src="/images/printer_hero_premium.webp"
+                  src="/images/printer_mobile.webp"
                   alt="Printer Repair Lab"
                   fill
                   priority
