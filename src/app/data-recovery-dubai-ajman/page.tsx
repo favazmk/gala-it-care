@@ -42,7 +42,7 @@ export default function DataRecoveryPage() {
             
             {/* Background Image (Desktop only) */}
             <div className="absolute inset-0 z-0 hidden lg:block">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/60 to-transparent z-10" />
               <Image 
                 src="/images/data_desktop.webp"
                 alt="Data Recovery Clean Room Lab"
@@ -55,7 +55,7 @@ export default function DataRecoveryPage() {
             <div className="w-full lg:w-[55%] relative z-20 p-10 lg:p-20 flex flex-col justify-center">
               {/* Background Image (Mobile only) */}
               <div className="absolute inset-0 z-0 lg:hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/60 to-primary z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/50 to-primary/85 z-10" />
                 <Image 
                   src="/images/data_mobile.webp"
                   alt="Data Recovery Clean Room Lab"
@@ -65,7 +65,7 @@ export default function DataRecoveryPage() {
                 />
               </div>
 
-              <div className="relative z-10 flex flex-col">
+              <div className="relative z-10 flex flex-col [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -74,7 +74,7 @@ export default function DataRecoveryPage() {
                 <span className="text-[11px] font-bold text-white tracking-widest uppercase">Dubai & Ajman Authorized Service</span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.05] text-white">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.05] text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.8),0_4px_24px_rgba(0,0,0,0.6)]">
                 Professional & Confidential <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Data Recovery</span>
               </h1>

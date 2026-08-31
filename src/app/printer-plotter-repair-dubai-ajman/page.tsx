@@ -39,7 +39,7 @@ export default function PrinterRepairPage() {
       <section className="relative bg-primary text-white pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
         {/* Background Layer */}
         <div className="absolute inset-0 z-0 hidden lg:block">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/60 to-transparent z-10" />
           <Image 
             src="/images/printer_desktop.webp"
             alt="Printer Repair Lab"
@@ -49,7 +49,7 @@ export default function PrinterRepairPage() {
           />
         </div>
         <div className="absolute inset-0 z-0 lg:hidden">
-          <div className="absolute inset-0 bg-primary/90 z-10" />
+          <div className="absolute inset-0 bg-primary/70 z-10" />
           <Image 
             src="/images/printer_mobile.webp"
             alt="Printer Repair Lab"
@@ -63,13 +63,13 @@ export default function PrinterRepairPage() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Content */}
-            <div className="w-full lg:w-3/5 flex flex-col order-2 lg:order-1">
+            <div className="w-full lg:w-3/5 flex flex-col order-2 lg:order-1 [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-px w-8 bg-accent"></span>
                 <span className="uppercase tracking-widest text-xs font-bold text-slate-300">Dubai & Ajman Service</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1] [text-shadow:0_2px_4px_rgba(0,0,0,0.8),0_4px_24px_rgba(0,0,0,0.6)]">
                 Fast & Certified <br />
                 <span className="text-accent">Printer & Plotter</span> <br />
                 Repair
