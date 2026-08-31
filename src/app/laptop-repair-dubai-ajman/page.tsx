@@ -76,7 +76,7 @@ export default function LaptopRepairPage() {
               
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.05] text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.8),0_4px_24px_rgba(0,0,0,0.6)]">
                 Expert <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Laptop Repair</span> Services
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400 [text-shadow:none]">Laptop Repair</span> Services
               </h1>
               
               <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-xl font-medium leading-relaxed">
