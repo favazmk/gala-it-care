@@ -24,7 +24,7 @@ export default function Header() {
               width={160}
               height={53}
               priority
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105 group-active:scale-105"
             />
           </Link>
           <div className="hidden lg:flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
@@ -45,11 +45,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.route}
-                className={`px-5 py-2.5 rounded-full text-[13px] font-bold uppercase tracking-widest transition-all duration-300 ${
-                  isActive 
-                    ? "bg-slate-100 text-accent shadow-sm" 
-                    : "text-slate-600 hover:text-primary hover:bg-slate-50"
-                }`}
+                className={`px-5 py-2.5 rounded-full text-[13px] font-bold uppercase tracking-widest transition-all duration-300 ${ isActive ? "bg-slate-100 text-accent shadow-sm" : "text-slate-600 hover:text-primary active:text-primary hover:bg-slate-50 active:bg-slate-50" }`}
               >
                 {item.name}
               </Link>
@@ -63,14 +59,14 @@ export default function Header() {
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 text-[13px] font-bold text-success bg-green-50/50 hover:bg-green-100 rounded-full transition-all duration-300 border border-green-100"
+            className="flex items-center gap-2 px-6 py-3 text-[13px] font-bold text-success bg-green-50/50 hover:bg-green-100 active:bg-green-100 rounded-full transition-all duration-300 border border-green-100"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp
           </a>
           <a
             href={`tel:${CONTACT_INFO.phonePrimary}`}
-            className="flex items-center gap-2 px-7 py-3 text-[13px] font-bold text-white bg-primary hover:bg-slate-800 rounded-full transition-all duration-300 shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5"
+            className="flex items-center gap-2 px-7 py-3 text-[13px] font-bold text-white bg-primary hover:bg-slate-800 active:bg-slate-800 rounded-full transition-all duration-300 shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <Phone className="w-4 h-4" />
             {CONTACT_INFO.phonePrimaryDisplay}
@@ -112,11 +108,7 @@ export default function Header() {
                 key={item.name}
                 href={item.route}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`px-5 py-4 rounded-2xl text-[14px] font-bold uppercase tracking-widest transition-all duration-300 ${
-                  isActive 
-                    ? "bg-slate-100 text-accent shadow-sm" 
-                    : "text-slate-600 hover:text-primary hover:bg-slate-50"
-                }`}
+                className={`px-5 py-4 rounded-2xl text-[14px] font-bold uppercase tracking-widest transition-all duration-300 ${ isActive ? "bg-slate-100 text-accent shadow-sm" : "text-slate-600 hover:text-primary active:text-primary hover:bg-slate-50 active:bg-slate-50" }`}
               >
                 {item.name}
               </Link>

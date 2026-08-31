@@ -26,7 +26,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
         return (
           <div 
             key={index} 
-            className={`border rounded-lg transition-colors ${isOpen ? 'border-accent bg-white shadow-sm' : 'border-border-light bg-white hover:border-slate-300'}`}
+            className={`border rounded-lg transition-colors ${isOpen ? 'border-accent bg-white shadow-sm' : 'border-border-light hover:border-slate-300 active:border-slate-300'}`}
           >
             <button
               onClick={() => toggleFAQ(index)}

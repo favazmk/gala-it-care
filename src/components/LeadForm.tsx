@@ -28,6 +28,8 @@ export default function LeadForm({ type, title, buttonText = "Get a Free Quote" 
     
     // Construct WhatsApp Message
     const serviceType = type === "printer" ? "Printer Repair" : type === "laptop" ? "Laptop Repair" : "Data Recovery";
+    const activeSource = typeof window !== "undefined" ? sessionStorage.getItem("ad_source") : null;
+    
     const message = `Hello Gala IT Care Team,
 
 I would like to request a service quote. Here are my details:
@@ -37,6 +39,7 @@ I would like to request a service quote. Here are my details:
 *Service Type:* ${serviceType}
 *Device Details:* ${deviceModel}
 *Issue Description:* ${issue}
+${activeSource ? `\n*Lead Source:* ${activeSource}` : ""}
 
 Please let me know how we can proceed.`;
 
@@ -70,7 +73,7 @@ Please let me know how we can proceed.`;
           <p className="text-xs tracking-widest uppercase text-slate-600 font-bold">Need immediate assistance?</p>
           <a
             href={`tel:${CONTACT_INFO.phonePrimary}`}
-            className="flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-primary bg-white hover:bg-slate-100 rounded-full transition-colors shadow-sm"
+            className="flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-primary bg-white hover:bg-slate-100 active:bg-slate-100 rounded-full transition-colors shadow-sm"
           >
             <Phone className="w-4 h-4" />
             Call Now
@@ -79,7 +82,7 @@ Please let me know how we can proceed.`;
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-success bg-white/60 hover:bg-white/80 rounded-full transition-colors border border-white/50"
+            className="flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-success bg-white/60 hover:bg-white/80 active:bg-white/80 rounded-full transition-colors border border-white/50"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp Us
@@ -220,14 +223,14 @@ Please let me know how we can proceed.`;
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center py-4 px-6 bg-primary hover:bg-slate-800 text-white font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-premium-hover active:scale-[0.99] disabled:opacity-70 disabled:pointer-events-none group"
+              className="w-full flex items-center justify-center py-4 px-6 bg-primary hover:bg-slate-800 active:bg-slate-800 text-white font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-premium-hover active:scale-[0.99] disabled:opacity-70 disabled:pointer-events-none group"
             >
               {isSubmitting ? (
                 <Loader2 className="w-5 h-5 animate-spin text-white" />
               ) : (
                 <span className="flex items-center gap-3 tracking-widest uppercase text-[12px]">
                   {buttonText}
-                  <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white/20 group-hover:bg-white/30 transition-colors">
+                  <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white/20 group-hover:bg-white/30 group-active:bg-white/30 active:bg-white/30 transition-colors">
                     <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
                   </span>
                 </span>

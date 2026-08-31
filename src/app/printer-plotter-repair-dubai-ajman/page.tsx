@@ -72,7 +72,7 @@ export default function PrinterRepairPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <a
                   href={`tel:${CONTACT_INFO.phonePrimary}`}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover text-white rounded-sm font-bold transition-all"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover active:bg-accent-hover text-white rounded-sm font-bold transition-all"
                 >
                   <Phone className="w-5 h-5" />
                   CALL: {CONTACT_INFO.phonePrimaryDisplay}
@@ -81,7 +81,7 @@ export default function PrinterRepairPage() {
                   href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/5 text-white rounded-sm font-bold transition-all"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/5 active:bg-white/5 text-white rounded-sm font-bold transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WHATSAPP URGENT FIX
@@ -128,11 +128,11 @@ export default function PrinterRepairPage() {
             {/* Category 1: Wide-Format */}
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_plotter.webp" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_plotter.webp" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-10 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">01</span>
                 </div>
                 <h4 className="text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">Wide-Format & Plotter</h4>
@@ -155,11 +155,11 @@ export default function PrinterRepairPage() {
             {/* Category 2: Office Printers */}
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px] lg:translate-y-12">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_laserjet.webp" alt="Office Printer Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_laserjet.webp" alt="Office Printer Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-10 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">02</span>
                 </div>
                 <h4 className="text-2xl md:text-3xl font-bold text-primary mb-4 tracking-tight">Office Printers & Copiers</h4>
@@ -308,7 +308,7 @@ export default function PrinterRepairPage() {
                 <li className="flex gap-3"><CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" /> Reduced business downtime</li>
               </ul>
               
-              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
+              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-block border-2 border-primary text-primary hover:bg-primary active:bg-primary hover:text-white active:text-white font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
                 Request On-Site Service
               </a>
             </div>
@@ -329,7 +329,7 @@ export default function PrinterRepairPage() {
                   <li className="flex gap-3"><CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" /> Ultrasonic cleaning & bench testing</li>
                 </ul>
                 
-                <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent text-white hover:bg-accent-hover font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
+                <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent text-white hover:bg-accent-hover active:bg-accent-hover font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
                   Contact Workshop
                 </a>
               </div>
@@ -384,7 +384,7 @@ export default function PrinterRepairPage() {
                 { q: "What should I do before calling for repair service?", a: "Please have your printer make, exact model number, and any error code displayed on the screen ready so our technicians can prepare the correct diagnostic tools." },
                 { q: "What happens if my printer cannot be repaired on-site?", a: "If a complex chip-level hardware failure is identified, we provide hassle-free pickup to our workshop facility, complete the fix, and deliver it back to you tested." }
               ].map((faq, i) => (
-                <details key={i} className="group bg-primary border border-slate-800 hover:border-slate-600 transition-colors rounded-sm">
+                <details key={i} className="group bg-primary border border-slate-800 hover:border-slate-600 active:border-slate-600 transition-colors rounded-sm">
                   <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-lg text-white">
                     <span>{faq.q}</span>
                     <span className="transition group-open:rotate-180">
@@ -411,13 +411,13 @@ export default function PrinterRepairPage() {
               <MapPin className="w-12 h-12 text-accent mb-6" />
               <h3 className="text-3xl font-black text-primary uppercase mb-2">Dubai</h3>
               <p className="text-slate-500 font-bold tracking-wide mb-6">AL KARAMA, OPP. BURJUMAN</p>
-              <a href="tel:+971586629186" className="text-2xl font-bold text-slate-800 hover:text-accent transition-colors">+971 58 662 9186</a>
+              <a href="tel:+971523245906" className="text-2xl font-bold text-slate-800 hover:text-accent active:text-accent transition-colors">+971 52 324 5906</a>
             </div>
             <div className="border-2 border-slate-100 p-10 flex flex-col items-center">
               <MapPin className="w-12 h-12 text-accent mb-6" />
               <h3 className="text-3xl font-black text-primary uppercase mb-2">Ajman</h3>
               <p className="text-slate-500 font-bold tracking-wide mb-6">AL RIYADH, NEAR AMINA HOSPITAL</p>
-              <a href="tel:+971561481460" className="text-2xl font-bold text-slate-800 hover:text-accent transition-colors">+971 56 148 1460</a>
+              <a href="tel:+971561481460" className="text-2xl font-bold text-slate-800 hover:text-accent active:text-accent transition-colors">+971 56 148 1460</a>
             </div>
           </div>
         </div>
@@ -442,7 +442,7 @@ export default function PrinterRepairPage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href={`tel:${CONTACT_INFO.phonePrimary}`}
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-primary hover:bg-slate-100 rounded-sm font-black uppercase tracking-widest transition-all"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-primary hover:bg-slate-100 active:bg-slate-100 rounded-sm font-black uppercase tracking-widest transition-all"
             >
               <Phone className="w-5 h-5" />
               Call Now
@@ -451,7 +451,7 @@ export default function PrinterRepairPage() {
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover text-white rounded-sm font-black uppercase tracking-widest transition-all shadow-xl"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover active:bg-accent-hover text-white rounded-sm font-black uppercase tracking-widest transition-all shadow-xl"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp Us

@@ -40,8 +40,8 @@ export default function LaptopRepairPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="bg-primary rounded-[3rem] relative overflow-hidden flex flex-col lg:flex-row items-center min-h-[85vh]">
             
-            {/* Background Image inside the rounded container */}
-            <div className="absolute inset-0 z-0">
+            {/* Background Image (Desktop only) */}
+            <div className="absolute inset-0 z-0 hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
                 src="/images/laptop_hero_premium.webp"
@@ -53,7 +53,20 @@ export default function LaptopRepairPage() {
             </div>
 
             <div className="w-full lg:w-[55%] relative z-20 p-10 lg:p-20 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
+              {/* Background Image (Mobile only) */}
+              <div className="absolute inset-0 z-0 lg:hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/60 to-primary z-10" />
+                <Image 
+                  src="/images/laptop_hero_premium.webp"
+                  alt="Advanced Electronics Lab"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                />
+              </div>
+
+              <div className="relative z-10 flex flex-col">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -88,7 +101,7 @@ export default function LaptopRepairPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={`tel:${CONTACT_INFO.phonePrimary}`}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <Phone className="w-4 h-4" />
                   Call: {CONTACT_INFO.phonePrimaryDisplay}
@@ -97,11 +110,12 @@ export default function LaptopRepairPage() {
                   href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp Instant Quote
                 </a>
+              </div>
               </div>
             </div>
             
@@ -129,11 +143,11 @@ export default function LaptopRepairPage() {
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/macbook.webp" alt="Mac Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/macbook.webp" alt="Mac Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-8 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">01</span>
                 </div>
                 <h4 className="text-2xl font-bold text-primary mb-2 tracking-tight">Apple Mac Repairs</h4>
@@ -157,11 +171,11 @@ export default function LaptopRepairPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-8">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/microsoft.webp" alt="Surface Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/microsoft.webp" alt="Surface Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-8 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">02</span>
                 </div>
                 <h4 className="text-2xl font-bold text-primary mb-2 tracking-tight">Microsoft Surface Repairs</h4>
@@ -184,11 +198,11 @@ export default function LaptopRepairPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-16">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/gaming.webp" alt="Gaming Laptop Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/gaming.webp" alt="Gaming Laptop Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center mb-8 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">03</span>
                 </div>
                 <h4 className="text-2xl font-bold text-primary mb-2 tracking-tight">Gaming Laptop Repairs</h4>
@@ -229,7 +243,7 @@ export default function LaptopRepairPage() {
               { title: "Performance Upgrades", desc: "High-speed NVMe M.2 SSD installation, DDR4/DDR5 RAM expansion." },
               { title: "Data Recovery & Software", desc: "Corrupted OS restoration, virus/malware cleanup, lost data retrieval." }
             ].map((item, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+              <div key={i} className="bg-white/5 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-white/10 hover:bg-white/10 active:bg-white/10 transition-colors">
                 <h4 className="text-xl font-bold text-accent mb-4 tracking-wide">{item.title}</h4>
                 <p className="text-[15px] text-slate-300 font-medium leading-relaxed">{item.desc}</p>
               </div>
@@ -265,7 +279,7 @@ export default function LaptopRepairPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                <tr className="hover:bg-slate-50 transition-colors group">
+                <tr className="hover:bg-slate-50 active:bg-slate-50 transition-colors group">
                   <td className="p-8 font-bold text-slate-800 text-[18px]">Doorstep Pickup & Delivery</td>
                   <td className="p-8 text-slate-600 font-medium text-[15px]">Busy professionals, remote workers, home repairs</td>
                   <td className="p-8">
@@ -276,7 +290,7 @@ export default function LaptopRepairPage() {
                     </ul>
                   </td>
                 </tr>
-                <tr className="hover:bg-slate-50 transition-colors group">
+                <tr className="hover:bg-slate-50 active:bg-slate-50 transition-colors group">
                   <td className="p-8 font-bold text-slate-800 text-[18px]">Workshop Walk-In Service</td>
                   <td className="p-8 text-slate-600 font-medium text-[15px]">Complex chip-level fixes, liquid damage, emergencies</td>
                   <td className="p-8">
@@ -330,10 +344,10 @@ export default function LaptopRepairPage() {
           <p className="text-lg md:text-xl text-slate-300 mb-14 font-medium max-w-2xl mx-auto">Contact Gala IT Care now for expert diagnostic assistance and fast laptop repairs across Dubai and Ajman.</p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1">
+            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]">
               <MessageCircle className="w-5 h-5" /> WhatsApp: {CONTACT_INFO.phonePrimaryDisplay}
             </a>
-            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
+            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
               <Phone className="w-5 h-5" /> Call Now
             </a>
           </div>

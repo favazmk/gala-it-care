@@ -6,7 +6,7 @@ export default function MobileBottomBar() {
     <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:hidden flex items-center bg-white/95 backdrop-blur-md border border-border-light shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-full p-1.5 w-[90%] max-w-[320px]">
       <a
         href={`tel:${CONTACT_INFO.phonePrimary}`}
-        className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full text-white bg-accent hover:bg-accent-hover transition-colors shadow-sm"
+        className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full text-white bg-accent hover:bg-accent-hover active:bg-accent-hover transition-colors shadow-sm"
       >
         <Phone className="w-4 h-4" />
         <span className="text-sm font-bold tracking-wide">Call Now</span>
@@ -16,7 +16,7 @@ export default function MobileBottomBar() {
         href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full text-success hover:bg-green-50 transition-colors"
+        className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full text-success hover:bg-green-50 active:bg-green-50 transition-colors"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="text-sm font-bold tracking-wide">WhatsApp</span>

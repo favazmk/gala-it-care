@@ -40,8 +40,8 @@ export default function PrinterRepairPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="bg-primary rounded-[3rem] relative overflow-hidden flex flex-col lg:flex-row items-center min-h-[85vh]">
             
-            {/* Background Image inside the rounded container */}
-            <div className="absolute inset-0 z-0">
+            {/* Background Image (Desktop only) */}
+            <div className="absolute inset-0 z-0 hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
                 src="/images/printer_hero_premium.webp"
@@ -53,7 +53,20 @@ export default function PrinterRepairPage() {
             </div>
 
             <div className="w-full lg:w-[55%] relative z-20 p-10 lg:p-20 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
+              {/* Background Image (Mobile only) */}
+              <div className="absolute inset-0 z-0 lg:hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/60 to-primary z-10" />
+                <Image 
+                  src="/images/printer_hero_premium.webp"
+                  alt="Printer Repair Lab"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                />
+              </div>
+
+              <div className="relative z-10 flex flex-col">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -88,7 +101,7 @@ export default function PrinterRepairPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={`tel:${CONTACT_INFO.phonePrimary}`}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <Phone className="w-4 h-4" />
                   Call: {CONTACT_INFO.phonePrimaryDisplay}
@@ -97,11 +110,12 @@ export default function PrinterRepairPage() {
                   href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp Urgent Fix
                 </a>
+              </div>
               </div>
             </div>
             
@@ -129,11 +143,11 @@ export default function PrinterRepairPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_plotter.webp" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_plotter.webp" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-10 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">01</span>
                 </div>
                 <h4 className="text-2xl md:text-3xl font-bold text-primary mb-8 tracking-tight">Wide-Format & Plotter Repairs</h4>
@@ -155,11 +169,11 @@ export default function PrinterRepairPage() {
 
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px] lg:translate-y-12">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_laserjet.webp" alt="LaserJet Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_laserjet.webp" alt="LaserJet Repair" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-10 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">02</span>
                 </div>
                 <h4 className="text-2xl md:text-3xl font-bold text-primary mb-8 tracking-tight">Office LaserJet & Copier Repairs</h4>
@@ -210,7 +224,7 @@ export default function PrinterRepairPage() {
           
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* On-Site */}
-            <div className="bg-white/5 backdrop-blur-sm p-10 md:p-14 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="bg-white/5 backdrop-blur-sm p-10 md:p-14 rounded-3xl border border-white/10 hover:bg-white/10 active:bg-white/10 transition-colors">
               <div className="inline-flex px-4 py-2 rounded-full bg-accent/20 text-accent text-[11px] font-bold tracking-widest uppercase mb-8">Option 01</div>
               <h4 className="text-3xl font-bold mb-4">On-Site Office Repair</h4>
               <p className="text-[14px] text-slate-400 mb-10"><strong className="text-white">Target Device / Need:</strong> Office fleets, heavy production plotters, enterprise copiers</p>
@@ -230,7 +244,7 @@ export default function PrinterRepairPage() {
             </div>
 
             {/* Workshop */}
-            <div className="bg-white/5 backdrop-blur-sm p-10 md:p-14 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="bg-white/5 backdrop-blur-sm p-10 md:p-14 rounded-3xl border border-white/10 hover:bg-white/10 active:bg-white/10 transition-colors">
               <div className="inline-flex px-4 py-2 rounded-full bg-brand-red/20 text-brand-red text-[11px] font-bold tracking-widest uppercase mb-8">Option 02</div>
               <h4 className="text-3xl font-bold mb-4">Service Center Workshop Repair</h4>
               <p className="text-[14px] text-slate-400 mb-10"><strong className="text-white">Target Device / Need:</strong> Desktop laserjets, compact inkjets, chip-level fixes</p>
@@ -268,7 +282,7 @@ export default function PrinterRepairPage() {
               { step: "04", title: "Quality Check", desc: "Full testing performed before returning unit with warranty." }
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-premium transition-shadow group relative overflow-hidden">
-                <div className="absolute top-0 right-0 -mr-6 -mt-6 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
+                <div className="absolute top-0 right-0 -mr-6 -mt-6 opacity-[0.03] group-hover:opacity-[0 group-active:opacity-[0.05] transition-opacity">
                   <span className="text-9xl font-black">{item.step}</span>
                 </div>
                 <div className="text-xs font-bold text-accent tracking-[0.2em] mb-4">STEP {item.step}</div>
@@ -317,10 +331,10 @@ export default function PrinterRepairPage() {
           <p className="text-lg md:text-xl text-slate-300 mb-14 font-medium max-w-2xl mx-auto">Contact Gala IT Care now for instant expert diagnostics and fast repair turnarounds across Dubai and Ajman.</p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1">
+            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]">
               <MessageCircle className="w-5 h-5" /> WhatsApp: {CONTACT_INFO.phonePrimaryDisplay}
             </a>
-            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
+            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
               <Phone className="w-5 h-5" /> Call Now
             </a>
           </div>

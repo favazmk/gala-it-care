@@ -40,8 +40,8 @@ export default function DataRecoveryPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="bg-primary rounded-[3rem] relative overflow-hidden flex flex-col lg:flex-row items-center min-h-[85vh]">
             
-            {/* Background Image inside the rounded container */}
-            <div className="absolute inset-0 z-0">
+            {/* Background Image (Desktop only) */}
+            <div className="absolute inset-0 z-0 hidden lg:block">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
                 src="/images/data_recovery_hero_premium.webp"
@@ -53,7 +53,20 @@ export default function DataRecoveryPage() {
             </div>
 
             <div className="w-full lg:w-[55%] relative z-20 p-10 lg:p-20 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
+              {/* Background Image (Mobile only) */}
+              <div className="absolute inset-0 z-0 lg:hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/60 to-primary z-10" />
+                <Image 
+                  src="/images/data_recovery_hero_premium.webp"
+                  alt="Data Recovery Clean Room Lab"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                />
+              </div>
+
+              <div className="relative z-10 flex flex-col">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-max mb-8">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -88,7 +101,7 @@ export default function DataRecoveryPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={`tel:${CONTACT_INFO.phonePrimary}`}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <Phone className="w-4 h-4" />
                   Call: {CONTACT_INFO.phonePrimaryDisplay}
@@ -97,11 +110,12 @@ export default function DataRecoveryPage() {
                   href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp Emergency Recovery
                 </a>
+              </div>
               </div>
             </div>
             
@@ -129,11 +143,11 @@ export default function DataRecoveryPage() {
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_hdd.webp" alt="HDD Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_hdd.webp" alt="HDD Recovery" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-8 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">01</span>
                 </div>
                 <h4 className="text-2xl font-bold text-primary mb-8 tracking-tight">Hard Drive (HDD) & Solid-State Drive (SSD) Recovery</h4>
@@ -155,11 +169,11 @@ export default function DataRecoveryPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-8">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_raid.webp" alt="RAID Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_raid.webp" alt="RAID Recovery" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-accent text-white flex items-center justify-center mb-8 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">02</span>
                 </div>
                 <h4 className="text-2xl font-bold text-primary mb-8 tracking-tight">RAID Arrays, NAS & Enterprise Servers</h4>
@@ -180,11 +194,11 @@ export default function DataRecoveryPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-16">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_mobile.webp" alt="Mobile Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
+                <Image src="/images/card_mobile.webp" alt="Mobile Recovery" fill className="object-cover group-hover:scale-105 group-active:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-active:bg-white/40 active:bg-white/40 group-hover:backdrop-blur-none group-active:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-md">
+                <div className="w-16 h-16 rounded-2xl bg-brand-red text-white flex items-center justify-center mb-8 group-hover:scale-110 group-active:scale-110 transition-transform duration-500 shadow-md">
                   <span className="text-2xl font-black">03</span>
                 </div>
                 <h4 className="text-2xl font-bold text-primary mb-8 tracking-tight">Smartphone, Memory Card & USB Flash Recovery</h4>
@@ -240,8 +254,8 @@ export default function DataRecoveryPage() {
               { step: "03", title: "Safe Extraction", desc: "Data extracted using hardware tools onto a clone drive safely." },
               { step: "04", title: "Verification", desc: "Preview restored files before delivery on external storage." }
             ].map((item, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors group relative overflow-hidden">
-                <div className="absolute top-0 right-0 -mr-6 -mt-6 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+              <div key={i} className="bg-white/5 backdrop-blur-sm p-8 lg:p-10 rounded-3xl border border-white/10 hover:bg-white/10 active:bg-white/10 transition-colors group relative overflow-hidden">
+                <div className="absolute top-0 right-0 -mr-6 -mt-6 opacity-[0.05] group-hover:opacity-[0 group-active:opacity-[0.1] transition-opacity">
                   <span className="text-9xl font-black text-white">{item.step}</span>
                 </div>
                 <div className="text-xs font-bold text-accent tracking-[0.2em] mb-4">STEP {item.step}</div>
@@ -290,10 +304,10 @@ export default function DataRecoveryPage() {
           <p className="text-lg md:text-xl text-slate-300 mb-14 font-medium max-w-2xl mx-auto">Contact Gala IT Care now for immediate diagnostic assistance and secure data recovery services across Dubai and Ajman.</p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1">
+            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]">
               <MessageCircle className="w-5 h-5" /> WhatsApp: {CONTACT_INFO.phonePrimaryDisplay}
             </a>
-            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
+            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
               <Phone className="w-5 h-5" /> Call Now
             </a>
           </div>

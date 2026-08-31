@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Brand & Mission - Takes more space on desktop */}
         <div className="col-span-1 md:col-span-4 lg:col-span-5 pr-8">
-          <Link href={ROUTES.home} className="inline-block mb-8 transition-transform duration-300 hover:-translate-y-1">
+          <Link href={ROUTES.home} className="inline-block mb-8 transition-transform duration-300 hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]">
             <Image
               src="https://galaitcare.com/wp-content/uploads/2025/05/Gala-IT-Care-C-Logo-180-60.png"
               alt="Gala IT Care Logo"
@@ -28,17 +28,17 @@ export default function Footer() {
           <h3 className="text-xs font-bold text-slate-100 tracking-[0.2em] uppercase mb-8">Expertise</h3>
           <ul className="space-y-4">
             <li>
-              <Link href={ROUTES.home} className="text-[14px] text-slate-400 hover:text-white transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all">
+              <Link href={ROUTES.home} className="text-[14px] text-slate-400 hover:text-white active:text-white transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all">
                 Printer Repair
               </Link>
             </li>
             <li>
-              <Link href={ROUTES.laptop} className="text-[14px] text-slate-400 hover:text-white transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all">
+              <Link href={ROUTES.laptop} className="text-[14px] text-slate-400 hover:text-white active:text-white transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all">
                 Laptop Repair
               </Link>
             </li>
             <li>
-              <Link href={ROUTES.dataRecovery} className="text-[14px] text-slate-400 hover:text-white transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all">
+              <Link href={ROUTES.dataRecovery} className="text-[14px] text-slate-400 hover:text-white active:text-white transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all">
                 Data Recovery
               </Link>
             </li>
@@ -50,11 +50,11 @@ export default function Footer() {
           <h3 className="text-xs font-bold text-slate-100 tracking-[0.2em] uppercase mb-8">Service Centers</h3>
           <div className="space-y-8">
             <div className="group">
-              <p className="font-semibold text-white mb-1 group-hover:text-accent transition-colors">{CONTACT_INFO.locations.dubai.name}</p>
+              <p className="font-semibold text-white mb-1 group-hover:text-accent active:text-accent transition-colors">{CONTACT_INFO.locations.dubai.name}</p>
               <p className="text-[14px] text-slate-400 leading-relaxed max-w-[200px]">{CONTACT_INFO.locations.dubai.address}</p>
             </div>
             <div className="group">
-              <p className="font-semibold text-white mb-1 group-hover:text-accent transition-colors">{CONTACT_INFO.locations.ajman.name}</p>
+              <p className="font-semibold text-white mb-1 group-hover:text-accent active:text-accent transition-colors">{CONTACT_INFO.locations.ajman.name}</p>
               <p className="text-[14px] text-slate-400 leading-relaxed max-w-[200px]">{CONTACT_INFO.locations.ajman.address}</p>
             </div>
           </div>
@@ -65,17 +65,17 @@ export default function Footer() {
           <h3 className="text-xs font-bold text-slate-100 tracking-[0.2em] uppercase mb-8">Contact</h3>
           <ul className="space-y-4">
             <li>
-              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="text-[14px] font-medium text-slate-400 hover:text-white transition-colors block">
+              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors block">
                 Dubai: <span className="text-white block mt-1">{CONTACT_INFO.phonePrimaryDisplay}</span>
               </a>
             </li>
             <li>
-              <a href={`tel:${CONTACT_INFO.phoneSecondary}`} className="text-[14px] font-medium text-slate-400 hover:text-white transition-colors block">
+              <a href={`tel:${CONTACT_INFO.phoneSecondary}`} className="text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors block">
                 Ajman: <span className="text-white block mt-1">{CONTACT_INFO.phoneSecondaryDisplay}</span>
               </a>
             </li>
             <li className="pt-4">
-              <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[13px] font-bold text-success hover:text-white transition-colors">
+              <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[13px] font-bold text-success hover:text-white active:text-white transition-colors">
                 WhatsApp Support &rarr;
               </a>
             </li>
@@ -94,15 +94,15 @@ export default function Footer() {
               href="https://webbranding.ae" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-bold text-[#6a0dad] hover:text-[#8a2be2] transition-colors"
+              className="font-bold text-[#6a0dad] hover:text-[ active:text-[#8a2be2] transition-colors"
             >
               Web Branding
             </a>
           </span>
         </p>
         <div className="flex space-x-8">
-          <Link href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
-          <Link href="#" className="hover:text-slate-300 transition-colors">Terms & Conditions</Link>
+          <Link href="#" className="hover:text-slate-300 active:text-slate-300 transition-colors">Privacy Policy</Link>
+          <Link href="#" className="hover:text-slate-300 active:text-slate-300 transition-colors">Terms & Conditions</Link>
         </div>
       </div>
     </footer>

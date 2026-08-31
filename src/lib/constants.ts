@@ -1,14 +1,14 @@
 export const CONTACT_INFO = {
-  phonePrimary: "+971586629186",
-  phonePrimaryDisplay: "+971 58 662 9186",
+  phonePrimary: "+971523245906",
+  phonePrimaryDisplay: "+971 52 324 5906",
   phoneSecondary: "+971561481460",
   phoneSecondaryDisplay: "+971 56 148 1460",
-  whatsapp: "+971586629186",
+  whatsapp: "+971523245906",
   locations: {
     dubai: {
       name: "Dubai Service Center",
       address: "Al Karama, Opp. Burjuman",
-      phone: "+971 58 662 9186",
+      phone: "+971 52 324 5906",
     },
     ajman: {
       name: "Ajman Service Center",

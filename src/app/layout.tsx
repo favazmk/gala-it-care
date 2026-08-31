@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
+import AdTracker from "@/components/AdTracker";
+
 export default function RootLayout({
   children,
 }: {
@@ -56,6 +58,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <AdTracker />
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
