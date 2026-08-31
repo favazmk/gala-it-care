@@ -44,7 +44,7 @@ export default function DataRecoveryPage() {
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
-                src="/images/data_recovery_hero_premium.jpg"
+                src="/images/data_recovery_hero_premium.webp"
                 alt="Data Recovery Clean Room Lab"
                 fill
                 priority
@@ -129,7 +129,7 @@ export default function DataRecoveryPage() {
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_hdd.jpg" alt="HDD Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_hdd.webp" alt="HDD Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -155,7 +155,7 @@ export default function DataRecoveryPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-8">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_raid.jpg" alt="RAID Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_raid.webp" alt="RAID Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -180,7 +180,7 @@ export default function DataRecoveryPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-16">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_mobile.jpg" alt="Mobile Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_mobile.webp" alt="Mobile Recovery" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">

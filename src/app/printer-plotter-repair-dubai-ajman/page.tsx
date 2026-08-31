@@ -41,7 +41,7 @@ export default function PrinterRepairPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-primary/85 mix-blend-multiply z-10" />
           <Image 
-            src="/images/printer_hero.jpg"
+            src="/images/printer_hero.webp"
             alt="Professional Printer and Plotter Repair in Dubai"
             fill
             priority
@@ -128,7 +128,7 @@ export default function PrinterRepairPage() {
             {/* Category 1: Wide-Format */}
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_plotter.jpg" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_plotter.webp" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -155,7 +155,7 @@ export default function PrinterRepairPage() {
             {/* Category 2: Office Printers */}
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px] lg:translate-y-12">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_laserjet.jpg" alt="Office Printer Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_laserjet.webp" alt="Office Printer Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -248,7 +248,7 @@ export default function PrinterRepairPage() {
       <section className="bg-surface-dark">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-auto">
-            <Image src="/images/printer_detail.jpg" alt="Printer Technician" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <Image src="/images/printer_detail.webp" alt="Printer Technician" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
           </div>
           <div className="w-full lg:w-1/2 p-12 md:p-20 lg:p-28 bg-primary text-white">
             <h2 className="text-4xl font-extrabold mb-6">Precision Repair. <br/> Properly Diagnosed.</h2>
@@ -427,7 +427,7 @@ export default function PrinterRepairPage() {
       <section className="relative py-32 bg-primary overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-primary/95 mix-blend-multiply z-10" />
-          <Image src="/images/printer_hero.jpg" alt="Printer Repair Final" fill className="object-cover object-bottom" />
+          <Image src="/images/printer_hero.webp" alt="Printer Repair Final" fill className="object-cover object-bottom" />
         </div>
         
         <div className="container mx-auto px-4 relative z-20 text-center">

@@ -44,7 +44,7 @@ export default function LaptopRepairPage() {
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
-                src="/images/laptop_hero_premium.jpg"
+                src="/images/laptop_hero_premium.webp"
                 alt="Advanced Electronics Lab"
                 fill
                 priority
@@ -129,7 +129,7 @@ export default function LaptopRepairPage() {
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-10">
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/macbook.png" alt="Mac Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/macbook.webp" alt="Mac Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -157,7 +157,7 @@ export default function LaptopRepairPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-8">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/microsoft.png" alt="Surface Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/microsoft.webp" alt="Surface Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -184,7 +184,7 @@ export default function LaptopRepairPage() {
 
             <div className="relative p-10 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group flex flex-col overflow-hidden min-h-[500px] lg:translate-y-16">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/gaming.png" alt="Gaming Laptop Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/gaming.webp" alt="Gaming Laptop Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">

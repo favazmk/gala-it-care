@@ -44,7 +44,7 @@ export default function PrinterRepairPage() {
             <div className="absolute inset-0 z-0">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent z-10" />
               <Image 
-                src="/images/printer_hero_premium.jpg"
+                src="/images/printer_hero_premium.webp"
                 alt="Printer Repair Lab"
                 fill
                 priority
@@ -129,7 +129,7 @@ export default function PrinterRepairPage() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px]">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_plotter.jpg" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_plotter.webp" alt="Plotter Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
@@ -155,7 +155,7 @@ export default function PrinterRepairPage() {
 
             <div className="relative p-10 md:p-14 rounded-3xl shadow-premium border border-slate-100 transition-all duration-500 hover:shadow-premium-hover group overflow-hidden flex flex-col min-h-[480px] lg:translate-y-12">
               <div className="absolute inset-0 z-0">
-                <Image src="/images/card_laserjet.jpg" alt="LaserJet Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/card_laserjet.webp" alt="LaserJet Repair" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-white/65 backdrop-blur-[2px] group-hover:bg-white/40 group-hover:backdrop-blur-none transition-all duration-500" />
               </div>
               <div className="relative z-10 flex flex-col h-full">
