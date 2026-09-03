@@ -18,7 +18,7 @@ export default function FinalCTA({ headline, copy }: FinalCTAProps) {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
             href={`tel:${CONTACT_INFO.phonePrimary}`}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-white bg-accent hover:bg-accent-hover active:bg-accent-hover rounded-lg transition-colors shadow-lg active:scale-[0.98]"
+            className="track-call-desktop track-call-mobile w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-white bg-accent hover:bg-accent-hover active:bg-accent-hover rounded-lg transition-colors shadow-lg active:scale-[0.98]"
           >
             <Phone className="w-5 h-5" />
             Call Now

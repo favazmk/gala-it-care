@@ -101,7 +101,7 @@ export default function DataRecoveryPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={`tel:${CONTACT_INFO.phonePrimary}`}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+                  className="track-call-desktop track-call-mobile inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <Phone className="w-4 h-4" />
                   Call: {CONTACT_INFO.phonePrimaryDisplay}
@@ -110,7 +110,7 @@ export default function DataRecoveryPage() {
                   href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
+                  className="track-wa-desktop track-wa-mobile inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white rounded-full font-bold transition-all duration-300 text-[13px] tracking-widest uppercase"
                 >
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp Emergency Recovery
@@ -304,10 +304,10 @@ export default function DataRecoveryPage() {
           <p className="text-lg md:text-xl text-slate-300 mb-14 font-medium max-w-2xl mx-auto">Contact Gala IT Care now for immediate diagnostic assistance and secure data recovery services across Dubai and Ajman.</p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]">
+            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="track-wa-desktop track-wa-mobile inline-flex items-center justify-center gap-3 px-8 py-5 bg-white hover:bg-slate-100 active:bg-slate-100 text-primary font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase shadow-premium hover:-translate-y-1 active:translate-y-0 active:scale-[0.98]">
               <MessageCircle className="w-5 h-5" /> WhatsApp: {CONTACT_INFO.phonePrimaryDisplay}
             </a>
-            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
+            <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="track-call-desktop track-call-mobile inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/20 hover:bg-white/10 active:bg-white/10 text-white font-bold rounded-full transition-all duration-300 text-[13px] tracking-widest uppercase">
               <Phone className="w-5 h-5" /> Call Now
             </a>
           </div>

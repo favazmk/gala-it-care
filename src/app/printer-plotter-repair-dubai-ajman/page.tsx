@@ -82,7 +82,7 @@ export default function PrinterRepairPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <a
                   href={`tel:${CONTACT_INFO.phonePrimary}`}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover active:bg-accent-hover text-white rounded-sm font-bold transition-all"
+                  className="track-call-desktop track-call-mobile inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent hover:bg-accent-hover active:bg-accent-hover text-white rounded-sm font-bold transition-all"
                 >
                   <Phone className="w-5 h-5" />
                   CALL: {CONTACT_INFO.phonePrimaryDisplay}
@@ -91,7 +91,7 @@ export default function PrinterRepairPage() {
                   href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/5 active:bg-white/5 text-white rounded-sm font-bold transition-all"
+                  className="track-wa-desktop track-wa-mobile inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/5 active:bg-white/5 text-white rounded-sm font-bold transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WHATSAPP URGENT FIX
@@ -318,7 +318,7 @@ export default function PrinterRepairPage() {
                 <li className="flex gap-3"><CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" /> Reduced business downtime</li>
               </ul>
               
-              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="inline-block border-2 border-primary text-primary hover:bg-primary active:bg-primary hover:text-white active:text-white font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
+              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="track-call-desktop track-call-mobile inline-block border-2 border-primary text-primary hover:bg-primary active:bg-primary hover:text-white active:text-white font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
                 Request On-Site Service
               </a>
             </div>
@@ -339,7 +339,7 @@ export default function PrinterRepairPage() {
                   <li className="flex gap-3"><CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" /> Ultrasonic cleaning & bench testing</li>
                 </ul>
                 
-                <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-block bg-accent text-white hover:bg-accent-hover active:bg-accent-hover font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
+                <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="track-wa-desktop track-wa-mobile inline-block bg-accent text-white hover:bg-accent-hover active:bg-accent-hover font-bold px-8 py-4 tracking-widest uppercase text-sm transition-colors">
                   Contact Workshop
                 </a>
               </div>
@@ -421,13 +421,13 @@ export default function PrinterRepairPage() {
               <MapPin className="w-12 h-12 text-accent mb-6" />
               <h3 className="text-3xl font-black text-primary uppercase mb-2">Dubai</h3>
               <p className="text-slate-500 font-bold tracking-wide mb-6">AL KARAMA, OPP. BURJUMAN</p>
-              <a href="tel:+971523245906" className="text-2xl font-bold text-slate-800 hover:text-accent active:text-accent transition-colors">+971 52 324 5906</a>
+              <a href="tel:+971523245906" className="track-call-desktop track-call-mobile text-2xl font-bold text-slate-800 hover:text-accent active:text-accent transition-colors">+971 52 324 5906</a>
             </div>
             <div className="border-2 border-slate-100 p-10 flex flex-col items-center">
               <MapPin className="w-12 h-12 text-accent mb-6" />
               <h3 className="text-3xl font-black text-primary uppercase mb-2">Ajman</h3>
               <p className="text-slate-500 font-bold tracking-wide mb-6">AL RIYADH, NEAR AMINA HOSPITAL</p>
-              <a href="tel:+971561481460" className="text-2xl font-bold text-slate-800 hover:text-accent active:text-accent transition-colors">+971 56 148 1460</a>
+              <a href="tel:+971561481460" className="track-call-desktop track-call-mobile text-2xl font-bold text-slate-800 hover:text-accent active:text-accent transition-colors">+971 56 148 1460</a>
             </div>
           </div>
         </div>
@@ -452,7 +452,7 @@ export default function PrinterRepairPage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href={`tel:${CONTACT_INFO.phonePrimary}`}
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-primary hover:bg-slate-100 active:bg-slate-100 rounded-sm font-black uppercase tracking-widest transition-all"
+              className="track-call-desktop track-call-mobile inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-primary hover:bg-slate-100 active:bg-slate-100 rounded-sm font-black uppercase tracking-widest transition-all"
             >
               <Phone className="w-5 h-5" />
               Call Now
@@ -461,7 +461,7 @@ export default function PrinterRepairPage() {
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover active:bg-accent-hover text-white rounded-sm font-black uppercase tracking-widest transition-all shadow-xl"
+              className="track-wa-desktop track-wa-mobile inline-flex items-center justify-center gap-3 px-10 py-5 bg-accent hover:bg-accent-hover active:bg-accent-hover text-white rounded-sm font-black uppercase tracking-widest transition-all shadow-xl"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp Us

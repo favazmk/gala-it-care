@@ -30,7 +30,7 @@ export default function LocationSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href={`tel:${CONTACT_INFO.locations.dubai.phone.replace(/\s+/g, '')}`}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-slate-800 active:bg-slate-800 transition-colors"
+                className="track-call-desktop track-call-mobile flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-slate-800 active:bg-slate-800 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 Call Branch
@@ -66,7 +66,7 @@ export default function LocationSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href={`tel:${CONTACT_INFO.locations.ajman.phone.replace(/\s+/g, '')}`}
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-slate-800 active:bg-slate-800 transition-colors"
+                className="track-call-desktop track-call-mobile flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-slate-800 active:bg-slate-800 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 Call Branch
@@ -75,7 +75,7 @@ export default function LocationSection() {
                 href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-green-50 text-green-700 font-semibold rounded-lg hover:bg-green-100 active:bg-green-100 transition-colors border border-green-200"
+                className="track-wa-desktop track-wa-mobile flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-green-50 text-green-700 font-semibold rounded-lg hover:bg-green-100 active:bg-green-100 transition-colors border border-green-200"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp

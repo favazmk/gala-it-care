@@ -66,7 +66,7 @@ export default function Header() {
           </a>
           <a
             href={`tel:${CONTACT_INFO.phonePrimary}`}
-            className="flex items-center gap-2 px-7 py-3 text-[13px] font-bold text-white bg-primary hover:bg-slate-800 active:bg-slate-800 rounded-full transition-all duration-300 shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            className="track-call-desktop flex items-center gap-2 px-7 py-3 text-[13px] font-bold text-white bg-primary hover:bg-slate-800 active:bg-slate-800 rounded-full transition-all duration-300 shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <Phone className="w-4 h-4" />
             {CONTACT_INFO.phonePrimaryDisplay}
@@ -118,7 +118,7 @@ export default function Header() {
         <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
           <a
             href={`tel:${CONTACT_INFO.phonePrimary}`}
-            className="flex items-center justify-center gap-2 px-7 py-4 text-[13px] font-bold text-white bg-primary rounded-full"
+            className="track-call-mobile flex items-center justify-center gap-2 px-7 py-4 text-[13px] font-bold text-white bg-primary rounded-full"
           >
             <Phone className="w-4 h-4" />
             {CONTACT_INFO.phonePrimaryDisplay}

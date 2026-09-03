@@ -73,7 +73,7 @@ Please let me know how we can proceed.`;
           <p className="text-xs tracking-widest uppercase text-slate-600 font-bold">Need immediate assistance?</p>
           <a
             href={`tel:${CONTACT_INFO.phonePrimary}`}
-            className="flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-primary bg-white hover:bg-slate-100 active:bg-slate-100 rounded-full transition-colors shadow-sm"
+            className="track-call-desktop track-call-mobile flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-primary bg-white hover:bg-slate-100 active:bg-slate-100 rounded-full transition-colors shadow-sm"
           >
             <Phone className="w-4 h-4" />
             Call Now
