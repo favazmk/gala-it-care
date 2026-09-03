@@ -82,7 +82,7 @@ Please let me know how we can proceed.`;
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-success bg-white/60 hover:bg-white/80 active:bg-white/80 rounded-full transition-colors border border-white/50"
+            className="track-wa-desktop track-wa-mobile flex items-center justify-center gap-2 px-6 py-4 text-[13px] font-bold text-success bg-white/60 hover:bg-white/80 active:bg-white/80 rounded-full transition-colors border border-white/50"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp Us
@@ -223,7 +223,7 @@ Please let me know how we can proceed.`;
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center py-4 px-6 bg-primary hover:bg-slate-800 active:bg-slate-800 text-white font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-premium-hover active:scale-[0.99] disabled:opacity-70 disabled:pointer-events-none group"
+              className="track-form-submit w-full flex items-center justify-center py-4 px-6 bg-primary hover:bg-slate-800 active:bg-slate-800 text-white font-bold rounded-full shadow-md transition-all duration-300 hover:shadow-premium-hover active:scale-[0.99] disabled:opacity-70 disabled:pointer-events-none group"
             >
               {isSubmitting ? (
                 <Loader2 className="w-5 h-5 animate-spin text-white" />

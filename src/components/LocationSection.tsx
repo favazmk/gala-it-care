@@ -39,7 +39,7 @@ export default function LocationSection() {
                 href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-green-50 text-green-700 font-semibold rounded-lg hover:bg-green-100 active:bg-green-100 transition-colors border border-green-200"
+                className="track-wa-desktop track-wa-mobile flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-green-50 text-green-700 font-semibold rounded-lg hover:bg-green-100 active:bg-green-100 transition-colors border border-green-200"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp

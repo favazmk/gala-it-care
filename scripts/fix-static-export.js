@@ -22,72 +22,37 @@ function processDirectory(directory) {
         let content = fs.readFileSync(fullPath, 'utf8');
         let modified = false;
 
-        // Calculate depth to determine relative path
-        const relativeToOut = path.relative(outDir, directory);
-        const depth = relativeToOut === '' ? 0 : relativeToOut.split(path.sep).length;
-        const relativePrefix = depth === 0 ? './' : '../'.repeat(depth);
+        // Use absolute path from root domain since it's hosted on services.galaitcare.com
+        const relativePrefix = '/';
 
         if (fullPath.endsWith('.html')) {
-          // Replace Next.js absolute paths with relative paths
-          content = content.replace(/(src|href)="\/_next\//g, `$1="${relativePrefix}_next/`);
-          content = content.replace(/(src|href)="\/images\//g, `$1="${relativePrefix}images/`);
+          // Replace Next.js absolute paths with assets path
+          content = content.replace(/(src|href)="\/_next\//g, `$1="/assets/`);
+          content = content.replace(/(src|href)="\/images\//g, `$1="/images/`);
           
-          // Replace internal page links to .html (excluding anchor links and external links)
-          content = content.replace(/href="\/([^"\.#]+)"/g, `href="${relativePrefix}$1.html"`);
-          content = content.replace(/href="\/"/g, `href="${relativePrefix}index.html"`);
           modified = true;
         }
 
         if (fullPath.endsWith('.js')) {
           // Fix Next.js static asset loading in JS chunks
-          content = content.replace(/\"\/_next\//g, `"${relativePrefix}_next/`);
-          content = content.replace(/\"\/images\//g, `"${relativePrefix}images/`);
+          content = content.replace(/\"\/_next\//g, `"/assets/`);
+          content = content.replace(/\"\/images\//g, `"/images/`);
           modified = true;
         }
 
         if (fullPath.endsWith('.css')) {
           // Fix CSS urls
-          content = content.replace(/url\(\"\/_next\//g, `url("${relativePrefix}_next/`);
-          content = content.replace(/url\(\'\/_next\//g, `url('${relativePrefix}_next/`);
-          content = content.replace(/url\(\/_next\//g, `url(${relativePrefix}_next/`);
+          content = content.replace(/url\(\"\/_next\//g, `url("/assets/`);
+          content = content.replace(/url\(\'\/_next\//g, `url('/assets/`);
+          content = content.replace(/url\(\/_next\//g, `url(/assets/`);
           
-          content = content.replace(/url\(\"\/images\//g, `url("${relativePrefix}images/`);
-          content = content.replace(/url\(\'\/images\//g, `url('${relativePrefix}images/`);
-          content = content.replace(/url\(\/images\//g, `url(${relativePrefix}images/`);
+          content = content.replace(/url\(\"\/images\//g, `url("/images/`);
+          content = content.replace(/url\(\'\/images\//g, `url('/images/`);
+          content = content.replace(/url\(\/images\//g, `url(/images/`);
           modified = true;
         }
 
-        // Fix Next.js virtual routing intercepting file:// protocol
-        if (fullPath.endsWith('.html')) {
-           const routerFixScript = `<script>
-              // Intercept pushState for file:// protocol
-              const originalPushState = window.history.pushState;
-              window.history.pushState = function(state, title, url) {
-                if (window.location.protocol === 'file:') {
-                  try {
-                    originalPushState.apply(window.history, [state, title, url]);
-                  } catch (e) {
-                    // Fallback to hard navigation
-                    let targetUrl = url;
-                    if (targetUrl.startsWith('/')) {
-                       targetUrl = targetUrl.substring(1);
-                    }
-                    if (targetUrl === '') targetUrl = 'index.html';
-                    else if (!targetUrl.endsWith('.html') && !targetUrl.includes('#') && !targetUrl.includes('?')) {
-                       targetUrl = targetUrl + '.html';
-                    }
-                    window.location.href = targetUrl;
-                  }
-                } else {
-                  originalPushState.apply(window.history, [state, title, url]);
-                }
-              };
-           </script>`;
-           if (!content.includes('originalPushState.apply')) {
-               content = content.replace('</head>', `${routerFixScript}</head>`);
-               modified = true;
-           }
-        }
+
 
         if (modified) {
           fs.writeFileSync(fullPath, content, 'utf8');
@@ -98,4 +63,12 @@ function processDirectory(directory) {
 }
 
 processDirectory(outDir);
-console.log('Successfully processed out/ directory for local file:/// execution.');
+
+// Rename _next to assets
+const nextDir = path.join(outDir, '_next');
+const assetsDir = path.join(outDir, 'assets');
+if (fs.existsSync(nextDir)) {
+  fs.renameSync(nextDir, assetsDir);
+}
+
+console.log('Successfully processed out/ directory for cPanel compatibility.');

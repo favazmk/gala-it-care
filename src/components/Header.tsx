@@ -59,7 +59,7 @@ export default function Header() {
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 text-[13px] font-bold text-success bg-green-50/50 hover:bg-green-100 active:bg-green-100 rounded-full transition-all duration-300 border border-green-100"
+            className="track-wa-desktop flex items-center gap-2 px-6 py-3 text-[13px] font-bold text-success bg-green-50/50 hover:bg-green-100 active:bg-green-100 rounded-full transition-all duration-300 border border-green-100"
           >
             <MessageCircle className="w-4 h-4" />
             WhatsApp
@@ -79,7 +79,7 @@ export default function Header() {
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-11 h-11 flex items-center justify-center rounded-full bg-green-50 text-success border border-green-100"
+            className="track-wa-mobile w-11 h-11 flex items-center justify-center rounded-full bg-green-50 text-success border border-green-100"
           >
             <MessageCircle className="w-5 h-5" />
           </a>

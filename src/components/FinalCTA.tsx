@@ -27,7 +27,7 @@ export default function FinalCTA({ headline, copy }: FinalCTAProps) {
             href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-green-600 bg-white hover:bg-slate-50 active:bg-slate-50 rounded-lg transition-colors shadow-lg active:scale-[0.98]"
+            className="track-wa-desktop track-wa-mobile w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-green-600 bg-white hover:bg-slate-50 active:bg-slate-50 rounded-lg transition-colors shadow-lg active:scale-[0.98]"
           >
             <MessageCircle className="w-5 h-5" />
             WhatsApp Us

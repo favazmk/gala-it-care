@@ -65,19 +65,14 @@ export default function Footer() {
           <h3 className="text-xs font-bold text-slate-100 tracking-[0.2em] uppercase mb-8">Contact</h3>
           <ul className="space-y-4">
             <li>
-              <a href={`tel:${CONTACT_INFO.phonePrimary}`} className="text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors block">
+              <div className="text-[14px] font-medium text-slate-400 block">
                 Dubai: <span className="text-white block mt-1">{CONTACT_INFO.phonePrimaryDisplay}</span>
-              </a>
+              </div>
             </li>
             <li>
-              <a href={`tel:${CONTACT_INFO.phoneSecondary}`} className="text-[14px] font-medium text-slate-400 hover:text-white active:text-white transition-colors block">
+              <div className="text-[14px] font-medium text-slate-400 block">
                 Ajman: <span className="text-white block mt-1">{CONTACT_INFO.phoneSecondaryDisplay}</span>
-              </a>
-            </li>
-            <li className="pt-4">
-              <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[13px] font-bold text-success hover:text-white active:text-white transition-colors">
-                WhatsApp Support &rarr;
-              </a>
+              </div>
             </li>
           </ul>
         </div>

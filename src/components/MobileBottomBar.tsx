@@ -16,7 +16,7 @@ export default function MobileBottomBar() {
         href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full text-success hover:bg-green-50 active:bg-green-50 transition-colors"
+        className="track-wa-mobile flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full text-success hover:bg-green-50 active:bg-green-50 transition-colors"
       >
         <MessageCircle className="w-5 h-5" />
         <span className="text-sm font-bold tracking-wide">WhatsApp</span>
