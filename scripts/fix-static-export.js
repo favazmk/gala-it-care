@@ -8,6 +8,19 @@ if (!fs.existsSync(outDir)) {
   process.exit(1);
 }
 
+const gtmHeadScript = `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P7XD7GKJ');</script>
+<!-- End Google Tag Manager -->`;
+
+const gtmBodyNoscript = `<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7XD7GKJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->`;
+
 function processDirectory(directory) {
   const files = fs.readdirSync(directory);
   
@@ -30,6 +43,15 @@ function processDirectory(directory) {
           content = content.replace(/(src|href)="\/_next\//g, `$1="/assets/`);
           content = content.replace(/(src|href)="\/images\//g, `$1="/images/`);
           
+          // Ensure GTM tags in head and body
+          if (!content.includes('<!-- Google Tag Manager -->')) {
+            content = content.replace(/<script>\s*\(function\(w,d,s,l,i\)\{w\[l\]=w\[l\]\|\|\[\];[\s\S]*?GTM-P7XD7GKJ[\s\S]*?<\/script>/, '');
+            content = content.replace('<head>', '<head>' + gtmHeadScript);
+          }
+          content = content.replace(/<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->/g, '');
+          content = content.replace(/<noscript><iframe src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-P7XD7GKJ"[^>]*><\/iframe><\/noscript>/g, '');
+          content = content.replace(/(<body[^>]*>)/, '$1' + gtmBodyNoscript);
+
           modified = true;
         }
 
